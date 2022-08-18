@@ -1,0 +1,230 @@
+body{
+    background-color: hsl(257, 40%, 49%);
+    background-image: url(../img/bg-desktop.svg);
+    display: grid;
+    grid: 
+    "head head" 
+    "info info" 
+    "socials socials"
+    "atribuition atribuition";
+}
+
+/* HEADER */
+.head{
+    grid-area: head;
+    display: flex;
+}
+
+.logo{
+    margin: 30px;
+    display: flex;
+}
+
+.logo a img{
+    max-width: 70%;
+}
+
+ /* INFORMATION */
+
+.info{
+    grid-area: info;
+    display: grid;
+    grid: "information texts";
+}
+
+.information{
+    grid-area: information;
+}
+
+.texts{
+    grid-area: texts;
+    justify-content: center;
+    width: 460px;
+    height: 500px;
+}
+
+.information img{
+    max-width: 80%;
+    margin: 30px 0 0 30px;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+}
+
+.texts p{
+    font-family: 'open sans';
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.texts h2{
+    color: #fff;
+    font-family: 'poppins';
+    font-weight: 600;
+    font-size: 35px;
+}  
+
+.texts a{
+    display: flex;
+}
+
+.texts a p{
+    font-family: 'poppins';
+    color: hsl(257, 40%, 49%);
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 11px 55px;
+    transition: 0.3s;
+}
+
+.texts a p:hover{
+    color: #fff;
+    background-color: violet;
+    border-radius: 40px;
+    padding: 11px 55px;
+}
+
+ /* SOCIALS */
+
+.socials{
+    grid-area: socials;
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px;
+}
+
+.socials div{
+    display: flex;
+    width: 200px;
+    height: 60px;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+.socials a{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff ;
+    border-radius: 50px ;
+    justify-content: center;
+    align-items: center; 
+}
+
+.socials a i{
+    color: #fff;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.socials .facebook i{
+    font-size: 16px;
+}
+
+.socials .twitter i{
+    font-size: 16px;
+}
+
+.socials a:hover i{
+    color: violet;
+} 
+
+.socials a:hover{
+    border-color: violet;
+}
+
+footer {
+    text-align: center;
+    grid-area: atribuition;
+    display: flex;
+    justify-content: center;
+    font-family: 'poppins';
+}
+
+.attribution{
+    color: #fff;
+}
+
+.attribution a{
+    color: #fff;
+    text-decoration:underline ;
+}
+
+
+@media(max-width:1000px){
+    body{
+        grid: 
+        "head"
+        "info"
+        "info"
+        "socials"
+        "atribuition";
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:425px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        background-image: url(../img/bg-mobile.svg) ;
+        background-repeat: no-repeat;
+    }
+    
+    .logo img{
+        width: 50%;
+    }
+
+    .socials a i:first-child{
+        margin-left: 10px;
+    }
+
+    .socials a i:last-child{
+        margin-right: 10px;
+    }
+
+    .texts{
+        text-align: center;
+        max-width: 90%;
+        align-items: center;
+        height: 400px;
+    }
+
+    .texts h2{
+        font-size: 22px;
+    }  
+
+    .socials{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .texts p{
+        font-size: 15px;
+    }
+
+    .texts .button p{
+        font-size: 13px;
+        border-radius: 40px;
+        padding: 11px 75px;
+    }
+
+    .texts a{
+        margin-top: 25px;
+    }
+
+    .socials{
+        padding: 0 0 60px 0;
+    }
+
+}
+
