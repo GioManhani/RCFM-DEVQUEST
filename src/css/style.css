@@ -184,14 +184,6 @@ footer {
         width: 50%;
     }
 
-    .socials a i:first-child{
-        margin-left: 10px;
-    }
-
-    .socials a i:last-child{
-        margin-right: 10px;
-    }
-
     .texts{
         text-align: center;
         max-width: 90%;
